@@ -3,10 +3,13 @@ package com.carlosabaunza.walletapp;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -41,13 +44,15 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.ViewHold
 
         private TextView tvNameAccount, tvTypeAccount, tvCurrentValue;
 
+        private ImageView ivPrincipal;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             tvNameAccount = itemView.findViewById(R.id.tv_item_name_account);
             tvTypeAccount = itemView.findViewById(R.id.tv_item_type_account);
             tvCurrentValue = itemView.findViewById(R.id.tv_item_balance);
-
+            ivPrincipal = itemView.findViewById(R.id.iv_item_account);
 
         }
 
@@ -55,6 +60,12 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.ViewHold
             tvNameAccount.setText(myAccount.getName());
             tvTypeAccount.setText(myAccount.getType());
             tvCurrentValue.setText(String.valueOf(myAccount.getCurrentValue()));
+            Picasso
+                    .get()
+                    .load(myAccount.getImageUrl())
+                    .placeholder(R.drawable.ic_launcher_background)
+                    .error(R.drawable.ic_launcher_background)
+                    .into(ivPrincipal);
         }
     }
 

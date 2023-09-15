@@ -1,17 +1,18 @@
 package com.carlosabaunza.walletapp;
 
 public class Account {
-
     private String name;
     private String type;
     private Double currentValue;
+    private String imageUrl;
 
 
     //Constructor
-    public Account(String name, String type, Double currentValue) {
+    public Account(String name, String type, Double currentValue, String imageUrl) {
         this.name = name;
         this.type = type;
         this.currentValue = currentValue;
+        this.imageUrl = imageUrl;
     }
 
     public String getName() {
@@ -36,6 +37,14 @@ public class Account {
 
     public void setCurrentValue(Double currentValue) {
         this.currentValue = currentValue;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
 

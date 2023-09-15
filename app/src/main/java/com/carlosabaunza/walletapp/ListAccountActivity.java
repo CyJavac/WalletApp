@@ -28,15 +28,13 @@ public class ListAccountActivity extends AppCompatActivity {
     }
 
     private void loadFakeData(){
-        Account myAccount1 = new Account("Bancolombia","Cuenta de ahorros", 12345600.0);
-        Account myAccount2 = new Account("Davivienda","Cuenta debito", 1684442.0);
-        Account myAccount3 = new Account("Efectivo","Efectivo", 1646444.0);
+        Account myAccount1 = new Account("Bancolombia","Cuenta de ahorros", 12345600.0, "https://i.pinimg.com/474x/b8/cd/c1/b8cdc1ad498fe080bc21bb5a03c24f83.jpg");
+        Account myAccount2 = new Account("Davivienda","Cuenta debito", 1684442.0, "https://s3.amazonaws.com/lacabinadavivienda.com/projects/assets_generales/img/logo-davivienda.png?v=2");
+        Account myAccount3 = new Account("Efectivo","Efectivo", 1646444.0, "https://cdn-icons-png.flaticon.com/512/438/438526.png");
         listAccountRV.add(myAccount1);
         listAccountRV.add(myAccount2);
         listAccountRV.add(myAccount3);
     }
-
-
 
 
 }
