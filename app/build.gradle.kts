@@ -40,4 +40,8 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
     //Piccaso para cargar imagenes url
     implementation("com.squareup.picasso:picasso:2.8")
+    //Colores
+    implementation("com.github.yukuku:ambilwarna:2.0.1")
+    //
+
 }
